@@ -1,12 +1,12 @@
 <template>
-  <footer class="relative shadow-inner bg-gray-50 pt-16 pb-6">
-    <div class="container mx-auto md:flex-row max-w-7xl">
+  <footer class="footer">
+    <div class="footer--container">
       <div class="w-full flex flex-wrap justify-between items-start mb-10">
 
         <div class="w-full lg:w-6/12 px-4">
           <div class="w-1/2">
-            <a href="#_" class="relative z-10 flex items-center w-auto text-2xl font-extrabold leading-none text-accent select-none">
-              starter.
+            <a href="#_" class="text--logo">
+              Starter
             </a>
           </div>
           <div class="my-2">
@@ -67,3 +67,21 @@ export default {
   name: 'Footer'
 }
 </script>
+
+<style lang="postcss" scoped>
+.footer {
+  @apply relative shadow-inner bg-gray-50 pt-16 pb-6;
+}
+
+.footer .footer--container {
+  @apply container mx-auto max-w-7xl;
+
+  @screen md {
+    @apply flex-row;
+  }
+}
+
+.footer .text--logo {
+  @apply relative z-10 flex items-center w-auto text-2xl font-extrabold leading-none text-accent select-none;
+}
+</style>

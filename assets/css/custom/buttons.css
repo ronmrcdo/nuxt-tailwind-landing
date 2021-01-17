@@ -1,0 +1,29 @@
+.btn {
+  @apply inline-flex items-center justify-center;
+  @apply px-4 py-2 text-base font-medium leading-6 rounded-md;
+  @apply transition duration-150 ease-out;
+
+  @screen md {
+    @apply mb-0 w-auto;
+  }
+}
+
+.btn--primary {
+  @apply text-white bg-primary shadow-primary border-primary;
+}
+
+.btn--primary:hover {
+  @apply bg-blue-600 border-blue-600;
+}
+
+.btn.btn--primary:focus {
+  @apply outline-none ring-2 ring-offset-2 ring-blue-500;
+}
+
+.btn.btn--default {
+  @apply text-gray-500 bg-gray-100
+}
+
+.btn.btn--default:hover {
+  @apply bg-gray-200 text-gray-600;
+}

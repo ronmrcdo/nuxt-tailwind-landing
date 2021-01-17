@@ -1,7 +1,10 @@
 <template>
   <div>
+    <!-- Hero Start -->
     <Hero />
+    <!-- Hero End -->
 
+    <!-- Features Start -->
     <section class="py-20 bg-gray-50 shadow-inner">
       <div class="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
         <h2 class="text-3xl font-bold tracking-tight text-accent sm:text-4xl md:text-5xl xl:text-6xl">
@@ -16,12 +19,8 @@
         <div class="grid grid-cols-4 gap-8 mt-10 sm:grid-cols-4 lg:grid-cols-12 sm:px-8 xl:px-0">
           <div class="relative flex flex-col items-center justify-start col-span-4 px-8 py-12 space-y-4 overflow-hidden">
             <div class="p-3 text-white bg-primary shadow-primary rounded-full">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 " viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
-                <path d="M5 8v-3a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-5" />
-                <circle cx="6" cy="14" r="3" />
-                <path d="M4.5 17l-1.5 5l3 -1.5l3 1.5l-1.5 -5" />
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
             <h4 class="text-xl font-medium text-accent">
@@ -34,12 +33,8 @@
 
           <div class="relative flex flex-col items-center justify-start col-span-4 px-8 py-12 space-y-4 overflow-hidden">
             <div class="p-3 text-white bg-primary shadow-primary rounded-full">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 " viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
-                <path d="M5 8v-3a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-5" />
-                <circle cx="6" cy="14" r="3" />
-                <path d="M4.5 17l-1.5 5l3 -1.5l3 1.5l-1.5 -5" />
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
             <h4 class="text-xl font-medium text-accent">
@@ -52,12 +47,8 @@
 
           <div class="relative flex flex-col items-center justify-start col-span-4 px-8 py-12 space-y-4 overflow-hidden">
             <div class="p-3 text-white bg-primary shadow-primary rounded-full">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 " viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
-                <path d="M5 8v-3a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-5" />
-                <circle cx="6" cy="14" r="3" />
-                <path d="M4.5 17l-1.5 5l3 -1.5l3 1.5l-1.5 -5" />
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
             <h4 class="text-xl font-medium text-accent">
@@ -70,10 +61,15 @@
         </div>
       </div>
     </section>
+    <!-- Features End -->
 
+    <!-- Testimonials Start-->
     <Testimonials :testimonials="testimonials"/>
+    <!-- Testimonials End-->
 
+    <!-- Call To Action Start -->
     <CallAction />
+    <!-- Call To Action End -->
   </div>
 </template>
 
@@ -87,6 +83,16 @@ export default {
     Hero,
     Testimonials,
     CallAction
+  },
+  head: {
+    title: 'Starter - Level up your website.',
+    meta: [ // SEO Tags
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'My starter home page'
+      }
+    ]
   },
   data: () => ({
     testimonials: [
